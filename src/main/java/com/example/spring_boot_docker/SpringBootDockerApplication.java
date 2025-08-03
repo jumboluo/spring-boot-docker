@@ -5,13 +5,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @SpringBootApplication
 @RestController
 public class SpringBootDockerApplication {
 
 	@RequestMapping("/")
 	public String home() {
-		return "Hello Docker World! abc";
+		return "Hello Docker World! "
+				+ LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) ;
 	}
 
 	public static void main(String[] args) {
