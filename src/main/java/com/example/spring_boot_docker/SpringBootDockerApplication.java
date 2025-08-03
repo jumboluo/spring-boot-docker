@@ -14,8 +14,7 @@ public class SpringBootDockerApplication {
 
 	@RequestMapping("/")
 	public String home() {
-		return "Hello Docker World! "
-				+ LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) ;
+		return "Server time: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 	}
 
 	public static void main(String[] args) {
