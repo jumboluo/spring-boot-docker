@@ -1,0 +1,14 @@
+# application.yml
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-docker
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:ycshop}?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: ${DB_USER:ycshopu}
+    password: ${DB_PASS:ycshopp}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
